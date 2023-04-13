@@ -20,9 +20,9 @@ app.get("/randomColor", (req, res) => {
 })
 
 app.get("/randomColors", (req, res) => {
-    let colorArray = [];
+    const colorArray = [];
     for (let i = 0; i < 5; i++){
-        colorArray[i] = casual.safe_color_name;
+        colorArray.push(casual.safe_color_name);
     }
     res.send(colorArray);
 }) 
