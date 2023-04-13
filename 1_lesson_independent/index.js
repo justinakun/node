@@ -28,8 +28,8 @@ app.get("/randomColors", (req, res) => {
 }) 
 
 app.get("/randomPlaces", (req, res) => {
-    let randomNumber = casual.integer(from = 1, to = 5);
-    let myObjectArray = [];
+    const randomNumber = casual.integer(from = 1, to = 5);
+    const myObjectArray = [];
     for(let i = 0; i < randomNumber; i++){
         myObjectArray[i] = {
         country: `${casual.country}`,
