@@ -25,7 +25,7 @@ app.get("/randomColors", (req, res) => {
         colorArray[i] = casual.safe_color_name;
     }
     res.send(colorArray);
-})
+}) 
 
 app.get("/randomPlaces", (req, res) => {
     let randomNumber = casual.integer(from = 1, to = 5);
