@@ -17,14 +17,28 @@ document.querySelector('#addItems').addEventListener('click', () =>{
         name: name,
         price: price
     }
-
+    // prideti nauja produkta(duomeni) i serveri
+    //fetch(serverio URL, papildomi parametrai) <- struktura
+    //serverio URL - adresas olo serverio
+    //papildomi parametrai - tai parametry objektas, kuris nusamo esybes apie musu kreipimasi
+    //esybes: method, headers, body
+    //method - kreipimosi metodas, gali buti pvz: "POST", "PUT", "DELETE", "GET"(default)
+    //headers - objektas {...}, gali buti {"Content-Type: "aplication/json} - nurodo, kad siunciamo duomenys yra JSON formato
+    //body - musu siunciami duomenys, reikia prideti JSON.stringify(data) tam, kad serveris suprastu siunciamus duomenis. Butinai turi buti JSON formato aka Javascript Object pvz: {name:"Rokas", surname: Andreikenas}
     fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json", //priimines duomenis json formatu
         },
         body: JSON.stringify({newObject}),
-    }).then(() => {
+    })
+        .then((resp) => resp.json())
+        .then((response) => {
+        console.log(response);
+        });
+        // .then() kai kvietimas ivykdytas, ivykdo .then() dali
+        //.then(response) - response dalis, tai kas grizta is serverio is res.send()
+
+        //perkrauti puslapi
         location.reload();
-    })   
 });

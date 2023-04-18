@@ -15,7 +15,7 @@ app.get("/products", (req, res) => {
 app.post("/products", (req, res) =>{
     const product = req.body.newObject;
     products.push(product);
-    res.send(req.body);
+    res.send(product);
 })
 
 app.listen(port, () =>{
