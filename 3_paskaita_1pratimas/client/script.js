@@ -25,11 +25,12 @@ fetch("http://localhost:3000/users")
       const table = document.querySelector('table');
       table.append(tr);
     });
-  });
+  })
 
 //adding new users
-document.querySelector('#registerBtn').addEventListener('click', ()=>{
+document.querySelector('form').addEventListener('submit', (event)=>{
     //get all values from the form
+    event.preventDefault();
     const password = document.querySelector('#pass').value;
     const email = document.querySelector('#email').value;
     const name = document.querySelector('#name').value;
@@ -39,7 +40,7 @@ document.querySelector('#registerBtn').addEventListener('click', ()=>{
     const city = document.querySelector('#city').value;
     const tel = document.querySelector('#phone').value;
     let check = null;
-    
+
     if (document.querySelector('#check').checked) {
       check = true;
 
@@ -58,7 +59,7 @@ document.querySelector('#registerBtn').addEventListener('click', ()=>{
         },
         body: JSON.stringify({user}),
     })
-        .then(() => {
-            location.reload();
-        });
+      .then(() => {
+        window.open("index.html");
+      });
 })
