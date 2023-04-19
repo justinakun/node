@@ -38,9 +38,14 @@ document.querySelector('#registerBtn').addEventListener('click', ()=>{
     const zip = document.querySelector('#zip').value;
     const city = document.querySelector('#city').value;
     const tel = document.querySelector('#phone').value;
-    const check = document.querySelector('#check').value;
-
+    let check = null;
     
+    if (document.querySelector('#check').checked) {
+      check = true;
+
+    } else {
+      check = false;
+    }
 
     const user = {
         name: name, surname: surname, address: address, zip: zip, city: city, phone: tel, email: email, agree: check, password: password
