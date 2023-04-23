@@ -24,11 +24,32 @@ app.get("/users", (req, res) => {
 
 app.post("/users", (req, res) =>{
     const user = req.body.user;
-    console.log(user);
     users.push(user);
     res.send(user);
 })
 
+app.post("/login", (req, res) => {
+
+    let foundUser = users.find((user) => user.email === req.body.email);
+
+    if (foundUser !== undefined) {
+
+      let submittedPassword = req.body.password; 
+      let storedPassword = foundUser.password; 
+
+      if (submittedPassword === storedPassword) {
+        res.send({ message: "Sėkmingai prisijungėte", approved: true });
+      } else {
+        res.send({ message: "Neteisingas slaptažodis", approved: false });
+      }
+    } else {
+
+      res.send({
+        message: "Neteisingas el. paštas",
+        approved: false,
+      });
+    }
+  });
 
 app.listen(port, () =>{
     console.log(`Server is running on the ${port}`);

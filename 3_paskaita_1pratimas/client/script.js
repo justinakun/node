@@ -32,34 +32,35 @@ document.querySelector('form').addEventListener('submit', (event)=>{
     //get all values from the form
     event.preventDefault();
     const password = document.querySelector('#pass').value;
-    const email = document.querySelector('#email').value;
-    const name = document.querySelector('#name').value;
-    const surname = document.querySelector('#surname').value;
-    const address = document.querySelector('#address').value;
-    const zip = document.querySelector('#zip').value;
-    const city = document.querySelector('#city').value;
-    const tel = document.querySelector('#phone').value;
-    let check = null;
+    const repeatPasswordInput = document.querySelector("#retypePass").value;
 
-    if (document.querySelector('#check').checked) {
-      check = true;
-
+    if(password === repeatPasswordInput){
+      const email = document.querySelector('#email').value;
+      const name = document.querySelector('#name').value;
+      const surname = document.querySelector('#surname').value;
+      const address = document.querySelector('#address').value;
+      const zip = document.querySelector('#zip').value;
+      const city = document.querySelector('#city').value;
+      const tel = document.querySelector('#phone').value;
+      const check = document.querySelector('#check').checked;
+  
+      const user = {
+          name: name, surname: surname, address: address, zip: zip, city: city, phone: tel, email: email, agree: check, password: password
+      }
+      //send all values through post
+      fetch("http://localhost:3000/users", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify({user}),
+      })
+        .then(() => {
+          window.open("index.html");
+        })
+        .catch((error) => console.log(error));
+      form.reset();
     } else {
-      check = false;
+      alert("Nesutampa slaptažodžiai, suveskite iš naujo");
     }
-
-    const user = {
-        name: name, surname: surname, address: address, zip: zip, city: city, phone: tel, email: email, agree: check, password: password
-    }
-    //send all values through post
-    fetch("http://localhost:3000/users", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({user}),
-    })
-      .then(() => {
-        window.open("index.html");
-      });
 })
