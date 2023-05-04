@@ -12,7 +12,7 @@ app.use(cors());
 
 const client = new MongoClient(URI);
 
-app.get('/', async (req, res) => {
+app.get('/movies', async (req, res) => {
   try {
     const con = await client.connect();
     const data = await con
@@ -27,7 +27,7 @@ app.get('/', async (req, res) => {
   }
 });
 
-app.post('/', async (req, res) => {
+app.post('/movies', async (req, res) => {
   try {
     const movie = req.body;
     const con = await client.connect();
