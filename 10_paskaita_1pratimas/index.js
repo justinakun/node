@@ -79,10 +79,7 @@ app.get('/lowestIncome', async (req, res) => {
     const data = await con
       .db('ManoDuomenuBaze')
       .collection('users')
-      .aggregate([
-        { $group: { _id: '$name', income: { $sum: '$income' } } },
-        { $sort: { income: -1 } },
-      ])
+      .aggregate([{ $sort: { income: -1 } }])
       .toArray();
     // $group - sugrupuoja, _id: $name - naudoja unikalų customerį,
     // income: { $sum: '$income' } - income raktas su suma kurią sudeda iš $income lauko
@@ -100,10 +97,7 @@ app.get('/highestIncome', async (req, res) => {
     const data = await con
       .db('ManoDuomenuBaze')
       .collection('users')
-      .aggregate([
-        { $group: { _id: '$name', income: { $sum: '$income' } } },
-        { $sort: { income: 1 } },
-      ])
+      .aggregate([{ $sort: { income: 1 } }])
       .toArray();
     await con.close();
     res.send(data);
