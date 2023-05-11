@@ -1,0 +1,47 @@
+html {
+    background-color: #ebf3f3;
+}
+
+body {    
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: #fcf5f6;
+}
+
+nav {
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #8391e3;
+    font-weight: bold;
+    padding: 1rem 2rem;
+}
+
+main {
+    padding: 1rem 5rem;
+}
+
+#btnNewMem {
+    background-color: #8391e3;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    padding: 0.5rem;
+}
+
+.box {
+    width: 300px;
+    height: 180px;
+    background-color: white;
+}
+  
+
