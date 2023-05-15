@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />   
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <body>
     <header>
         <nav class="flex">
@@ -21,18 +18,26 @@
         </nav>
     </header>
     <main>
+        <div>
+            <h4 id="output"></h2>
+        </div>
         <div class="flex">
             <div>
-                <h3>Membership Management</h3>
-                <p>Here you can manage your membership packages. Note: Make sure you are not deleting or deactivating packages assigned to active users</p>
-            </div>
-            <div>
-                <button  class="btnNewMem" id="newMember">+ New Membership</button>
-            </div>            
+                <h3>Create Membership</h3>
+            </div>        
         </div>
-        <div class="boxes">
+            <form action="" class="createMembership boxShadow">
+                <label for="">Name</label>
+                <input type="text" placeholder="Name" class="outsetBorder" id="name"><br>
+                <label for="">Membership Price</label>
+                <input type="text" placeholder="Membership Price" class="outsetBorder" id="price"><br>
+                <label for="">Description</label>
+                <textarea name="" id="" cols="30" rows="10" class="outsetBorder"></textarea><br>
+                <button id="cancelBtn">Cancel</button>
+                <input class="btnNewMem" type="submit" value="New Membership">                
+            </form>
         </div>
-        <script src="index.js"></script>
+        <script src="newmembership.js"></script>
     </main>
     <footer>
         <p><span class="smallText">Copyright &copy2023 Membership Manager</span></p>

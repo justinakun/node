@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <nav class="flex">
+            <a href="" class="grey">Memberships</a>
+            <a href="">Users</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h4 id="output"></h2>
+        </div>
+        <div class="flex">
+            <div>
+                <h3>Create User</h3>
+            </div>        
+        </div>
+            <form action="" class="createUser boxShadow">
+                <label for="">First Name</label>
+                <input type="text" placeholder="First Name" class="outsetBorder" id="name"><br>
+                <label for="">Last Name</label>
+                <input type="text" placeholder="Last Name" class="outsetBorder" id="surname"><br>
+                <label for="">Email Address</label>
+                <input type="text" placeholder="Email Address" class="outsetBorder" id="email"><br>
+                <label for="memberships">Change Membership</label>
+                <select name="memberships" id="memberships">
+                </select>
+                <button id="cancelBtn">Cancel</button>
+                <input class="btnNewMem" type="submit" value="New User">                
+            </form>
+        </div>
+        <script src="newuser.js"></script>
+    </main>
+    <footer>
+        <p><span class="smallText">Copyright &copy2023 Membership Manager</span></p>
+    </footer>    
+</body>
+</html>

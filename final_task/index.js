@@ -34,7 +34,7 @@ app.post('/memberships', async (req, res) => {
       .collection('services')
       .insertOne(membership);
     await con.close();
-    res.send(data);
+    res.send(membership);
   } catch (error) {
     res.status(500).send(error);
   }
@@ -47,7 +47,7 @@ app.delete('/memberships/:id', async (req, res) => {
     const data = await con
       .db(dbName)
       .collection('services')
-      .deleteOne({ _id: new ObjectId(id) }); //
+      .deleteOne({ _id: new ObjectId(id) });
     await con.close();
     res.send(data);
   } catch (error) {
@@ -82,12 +82,12 @@ app.get('/users/:order', async (req, res) => {
   }
 });
 
-//not fully done
 app.post('/users/', async (req, res) => {
   const user = req.body;
+  user.service_id = new ObjectId(user.service_id); // Convert service_id to ObjectId
   try {
     const con = await client.connect();
-    const data = await con.db(dbName).collection('services').insertOne(user);
+    const data = await con.db(dbName).collection('users').insertOne(user);
     await con.close();
     res.send(data);
   } catch (error) {
