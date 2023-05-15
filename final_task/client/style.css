@@ -39,7 +39,7 @@ main {
 }
 
 .box {
-    width: 300px;
+    width: 350px;
     height: 180px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -56,7 +56,7 @@ footer {
     text-align: center;
 }
 
-.createMembership, .createUser {
+.createMembership {
     text-align: center;
     background-color: white;
     padding: 3rem;
@@ -84,3 +84,101 @@ footer {
 .smallText {
     font-size: 0.8rem;
 }
+
+.deleteIcon {
+  color: red;
+  font-size: 15px;
+  background-color: rgb(245, 205, 211);
+  padding: 0.3rem;
+  margin-right: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.cancelBtn {
+    background-color: #ffffff;
+    color: Black;
+    border: none;
+    border-radius: 5%;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.formContainer {
+    display: flexbox;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+.formRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 20rem;
+}
+
+.label {
+    text-align: right;
+    margin-right: 50px;
+    flex-basis: 10%;
+}
+
+.width100 {
+    width: 100px;
+}
+
+.input {
+    text-align: space-around;
+    flex-basis: 40%;
+}
+
+.sortContainer {
+    text-align: center;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.btnContainer {
+    margin-left: auto;
+}
+
+label>span {
+    color: red;
+}
+
+.createUser {
+    background-color: white;
+    padding: 3rem;
+}
+
+.cancelAndNew {
+    text-align: center;
+}
+
+.nameInput {
+    width: 100%;
+}
+
+.nameInput>input {
+    width: 80%;
+}
+
+.emailInput>input {
+    width: 40%;
+}
+  

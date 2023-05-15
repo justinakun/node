@@ -13,8 +13,8 @@
 <body>
     <header>
         <nav class="flex">
-            <a href="" class="grey">Memberships</a>
-            <a href="">Users</a>
+            <a href="index.html" class="grey" id="navMem">Memberships</a>
+            <a href="usermanagement.html" id="navUsers">Users</a>
         </nav>
     </header>
     <main>
@@ -26,19 +26,54 @@
                 <h3>Create User</h3>
             </div>        
         </div>
-            <form action="" class="createUser boxShadow">
-                <label for="">First Name</label>
-                <input type="text" placeholder="First Name" class="outsetBorder" id="name"><br>
-                <label for="">Last Name</label>
-                <input type="text" placeholder="Last Name" class="outsetBorder" id="surname"><br>
-                <label for="">Email Address</label>
-                <input type="text" placeholder="Email Address" class="outsetBorder" id="email"><br>
-                <label for="memberships">Change Membership</label>
-                <select name="memberships" id="memberships">
-                </select>
-                <button id="cancelBtn">Cancel</button>
+            <!-- <form action="" class="createUser boxShadow flexbox formCtn">
+                <div class="formGrp">
+                    <label for="" class="bold">First Name <span class="required">*</span></label>
+                    <input type="text" placeholder="First Name" class="outsetBorder" id="name">
+                </div>
+                <div class="formGrp">
+                    <label for="" class="bold">Last Name <span class="required">*</span></label>
+                    <input type="text" placeholder="Last Name" class="outsetBorder" id="surname">
+                </div>
+                <div class="formGrp">
+                    <label for="" class="bold">Email Address <span class="required">*</span></label>
+                    <input type="text" placeholder="Email Address" class="outsetBorder" id="email">
+                </div>
+                <div class="formGrp membership">
+                    <label for="memberships" class="bold">Change Membership</label>
+                    <select name="memberships" id="memberships">
+                    </select>
+                </div><br>                
+                <button class="cancelBtn">Cancel</button>
                 <input class="btnNewMem" type="submit" value="New User">                
-            </form>
+            </form> -->
+            <form action="" class="createUser boxShadow formCtn">
+                <div class="formGrp">
+                  <div class="flex">
+                    <div class="nameInput">
+                      <label for="" class="bold">First Name <span class="required">*</span></label><br>
+                      <input type="text" placeholder="First Name" class="outsetBorder" id="name">
+                    </div>
+                    <div class="nameInput">
+                      <label for="" class="bold">Last Name <span class="required">*</span></label><br>
+                      <input type="text" placeholder="Last Name" class="outsetBorder" id="surname">
+                    </div>
+                  </div>
+                </div>
+                <div class="formGrp emailInput">
+                  <label for="" class="bold">Email Address <span class="required">*</span></label><br>
+                  <input type="text" placeholder="Email Address" class="outsetBorder" id="email">
+                </div>
+                <div class="formGrp membership">
+                  <label for="memberships" class="bold">Change Membership</label><br>
+                  <select name="memberships" id="memberships"></select>
+                </div><br> 
+                <div class="cancelAndNew">
+                    <button class="cancelBtn">Cancel</button>
+                    <input class="btnNewMem" type="submit" value="New User">
+                </div>                      
+              </form>
+              
         </div>
         <script src="newuser.js"></script>
     </main>

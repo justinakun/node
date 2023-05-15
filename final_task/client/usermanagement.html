@@ -13,21 +13,24 @@
 <body>
     <header>
         <nav class="flex">
-            <a href="" class="grey">Memberships</a>
-            <a href="">Users</a>
+            <a href="index.html" class="grey" id="navMem">Memberships</a>
+            <a href="usermanagement.html" id="navUsers">Users</a>
         </nav>
     </header>
     <main>
-        <div class="flex">
+        <div class="flex spaceBetween">
             <div>
                 <h3>User Management</h3>
-                <a href="" class="sort">Sorting By Name: ASC</a>
-                <i></i>
             </div>
-            <div>
+            <div class="btnContainer">
                 <button  class="btnNewMem" id="newUser">+ New User</button>
-            </div>            
+            </div>        
+            <br>
         </div>
+        <div class="sortContainer">
+                <a href="" class="sort">Sorting By Name: ASC</a>
+                <i></i> <br> <br>          
+        </div>                       
         <div class="boxes">
         </div>
         <script src="usermanagement.js"></script>

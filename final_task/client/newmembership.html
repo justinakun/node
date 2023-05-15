@@ -13,8 +13,8 @@
 <body>
     <header>
         <nav class="flex">
-            <a href="">Memberships</a>
-            <a href="" class="grey">Users</a>
+            <a href="index.html" id="navMem">Memberships</a>
+            <a href="usermanagement.html" id="navUsers" class="grey">Users</a>
         </nav>
     </header>
     <main>
@@ -26,14 +26,20 @@
                 <h3>Create Membership</h3>
             </div>        
         </div>
-            <form action="" class="createMembership boxShadow">
-                <label for="">Name</label>
-                <input type="text" placeholder="Name" class="outsetBorder" id="name"><br>
-                <label for="">Membership Price</label>
-                <input type="text" placeholder="Membership Price" class="outsetBorder" id="price"><br>
-                <label for="">Description</label>
-                <textarea name="" id="" cols="30" rows="10" class="outsetBorder"></textarea><br>
-                <button id="cancelBtn">Cancel</button>
+            <form action="" class="createMembership boxShadow formContainer">
+                <div class="formRow">
+                    <label for="" class="bold label">Name</label>
+                    <input type="text" placeholder="Name" class="outsetBorder input" id="name"><br>
+                </div>
+                <div class="formRow">
+                    <label for="" class="bold label">Membership Price</label>
+                    <input type="text" placeholder="Membership Price" class="outsetBorder input" id="price"><br>
+                </div>
+                <div class="formRow">
+                    <label for="" class="bold label">Description</label>
+                    <textarea name="" id="" class="outsetBorder input"></textarea><br>
+                </div>              
+                <button class="cancelBtn">Cancel</button>
                 <input class="btnNewMem" type="submit" value="New Membership">                
             </form>
         </div>

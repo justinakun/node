@@ -9,13 +9,14 @@ fetch('http://localhost:3000/memberships')
 
       priceName.textContent = `$${service.price} ${service.name}`;
       description.textContent = service.description;
-      deleteIcon.classList.add('fas', 'fa-trash-alt');
+      deleteIcon.classList.add('fas', 'fa-trash-alt', 'deleteIcon');
       deleteIcon.setAttribute('data-id', service['_id']);
 
       box.append(priceName, description, deleteIcon);
 
-      // add the CSS class to the element
+      // add the CSS
       box.classList.add('box');
+      box.classList.add('relative');
 
       const boxes = document.querySelector('.boxes');
       boxes.append(box);

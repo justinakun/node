@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const output = document.querySelector('#output');
-const cancelBtn = document.querySelector('#cancelBtn');
+const cancelBtn = document.querySelector('.cancelBtn');
 const memShips = [];
 
 // add membership options
